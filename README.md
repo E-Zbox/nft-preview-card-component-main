@@ -96,6 +96,6 @@ to learn more about CSS grid and flexbox visit YouTube application. Resourceful 
 
 _Chukwunyerem_ zboxstudios97@gmail.com
 
--   Fiverr - [@profile](https://www.fiverr.com/dinmainnovations.com)
--   Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/E-Zbox)
--   Twitter - [@yourusername](https://www.twitter.com/ceoCodes)
+-   Fiverr - [@dinmainnovations](https://www.fiverr.com/dinmainnovations.com)
+-   Frontend Mentor - [@ceoCodes](https://www.frontendmentor.io/profile/E-Zbox)
+-   Twitter - [@ceoCodes](https://www.twitter.com/ceoCodes)
