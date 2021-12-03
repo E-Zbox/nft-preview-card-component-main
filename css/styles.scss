@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;400&display=swap");
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Outfit", "Calibri Light";
+    box-sizing: border-box;
+    // screen
+    --mobile-width: 375px;
+    --desktop-width: 1440px;
+    // colors
+    --white: hsl(0, 0%, 100%);
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --dark-blue-01: hsl(215, 32%, 27%);
+    --dark-blue-02: hsl(216, 50%, 16%);
+    --dark-blue-03: hsl(217, 54%, 11%);
+    // font size
+    --small-size: 18px;
+    // font weights
+    --smaller-weight: 300;
+    --small-weight: 400;
+    --medium-weight: 600;
+    // padding
+    --three-px: 3px;
+    --seven-px: 7px;
+    --ten-px: 10px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: var(--dark-blue-03);
+    padding: calc(var(--ten-px) * 10) 0px;
+    main {
+        width: 100%;
+        .container {
+            width: 100%;
+            .contents {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                .card {
+                    display: grid;
+                    row-gap: var(--ten-px);
+                    width: 340px;
+                    border-radius: 15px;
+                    box-sizing: border-box;
+                    padding: calc(var(--ten-px) * 2.5);
+                    background-color: var(--dark-blue-02);
+                    margin-bottom: calc(var(--ten-px) * 2.3);
+                    margin-right: calc(var(--ten-px) * 2.3);
+                    .card-img {
+                        width: 100%;
+                        height: 42vh;
+                        border-radius: 10px;
+                        margin-bottom: calc(var(--ten-px) * 3.2);
+                        background-size: 100% auto;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-image: url("../images/image-equilibrium.jpg");
+                    }
+                    h3.card-title {
+                        color: var(--white);
+                        line-height: 0;
+                        font-size: 1.34rem;
+                        letter-spacing: 0.1rem;
+                        margin-bottom: calc(var(--ten-px) * 1.5);
+                        font-weight: calc(var(--medium-weight));
+                    }
+                    p.card-about {
+                        color: var(--soft-blue);
+                        line-height: 1.5rem;
+                        font-weight: var(--small-weight);
+                        margin-bottom: calc(var(--ten-px) * 0.7);
+                        font-size: calc(var(--small-size) * 0.95);
+                    }
+                    .card-price-duration {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin-bottom: calc(var(--ten-px) * 0.7);
+                        .price,
+                        .duration {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            p.price,
+                            p.duration {
+                                padding-left: var(--seven-px);
+                                line-height: 0;
+                            }
+                            p.price {
+                                color: var(--cyan);
+                                letter-spacing: 0.01rem;
+                                font-size: calc(var(--small-size) * 0.92);
+                            }
+                            p.duration {
+                                color: var(--soft-blue);
+                                letter-spacing: 0.02rem;
+                                font-weight: calc(var(--small-weight));
+                                &:hover {
+                                    color: var(--cyan);
+                                }
+                            }
+                        }
+                    }
+                    .creator {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        padding-top: calc(var(--ten-px) * 1.7);
+                        border-top: 1px solid var(--dark-blue-01);
+                        .profile {
+                            --size: 36px;
+                            width: var(--size);
+                            height: var(--size);
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            img {
+                                box-shadow: -1px 1px 1px var(--white),
+                                    -1px -1px 1px var(--white),
+                                    1px 1px 1px var(--white),
+                                    1px -1px 1px var(--white);
+                                border-radius: 50%;
+                            }
+                        }
+                        .text {
+                            margin-left: calc(var(--ten-px) * 1.4);
+                            p {
+                                color: var(--soft-blue);
+                                span {
+                                    color: var(--white);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .attribution {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 5vh;
+        position: fixed;
+        bottom: 0px;
+        left: 50%;
+        color: var(--dark-blue-03);
+        background-color: var(--dark-blue-01);
+        transform: translateX(-50%);
+        font-size: var(--size);
+        a {
+            color: white;
+        }
+    }
+}
+@media (max-width: var(--mobile-width)) {
+    body {
+        padding: calc(var(--ten-px) * 4) calc(var(--ten-px) * 1.5);
+        main {
+            width: 100%;
+        }
+    }
+}

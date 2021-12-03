@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;400&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Outfit", "Calibri Light";
+  box-sizing: border-box;
+  --mobile-width: 375px;
+  --desktop-width: 1440px;
+  --white: hsl(0, 0%, 100%);
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --dark-blue-01: hsl(215, 32%, 27%);
+  --dark-blue-02: hsl(216, 50%, 16%);
+  --dark-blue-03: hsl(217, 54%, 11%);
+  --small-size: 18px;
+  --smaller-weight: 300;
+  --small-weight: 400;
+  --medium-weight: 600;
+  --three-px: 3px;
+  --seven-px: 7px;
+  --ten-px: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--dark-blue-03);
+  padding: calc(var(--ten-px) * 10) 0px;
+}
+body main {
+  width: 100%;
+}
+body main .container {
+  width: 100%;
+}
+body main .container .contents {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body main .container .contents .card {
+  display: grid;
+  row-gap: var(--ten-px);
+  width: 340px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: calc(var(--ten-px) * 2.5);
+  background-color: var(--dark-blue-02);
+  margin-bottom: calc(var(--ten-px) * 2.3);
+  margin-right: calc(var(--ten-px) * 2.3);
+}
+body main .container .contents .card .card-img {
+  width: 100%;
+  height: 42vh;
+  border-radius: 10px;
+  margin-bottom: calc(var(--ten-px) * 3.2);
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/image-equilibrium.jpg");
+}
+body main .container .contents .card h3.card-title {
+  color: var(--white);
+  line-height: 0;
+  font-size: 1.34rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: calc(var(--ten-px) * 1.5);
+  font-weight: calc(var(--medium-weight));
+}
+body main .container .contents .card p.card-about {
+  color: var(--soft-blue);
+  line-height: 1.5rem;
+  font-weight: var(--small-weight);
+  margin-bottom: calc(var(--ten-px) * 0.7);
+  font-size: calc(var(--small-size) * 0.95);
+}
+body main .container .contents .card .card-price-duration {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: calc(var(--ten-px) * 0.7);
+}
+body main .container .contents .card .card-price-duration .price,
+body main .container .contents .card .card-price-duration .duration {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body main .container .contents .card .card-price-duration .price p.price,
+body main .container .contents .card .card-price-duration .price p.duration,
+body main .container .contents .card .card-price-duration .duration p.price,
+body main .container .contents .card .card-price-duration .duration p.duration {
+  padding-left: var(--seven-px);
+  line-height: 0;
+}
+body main .container .contents .card .card-price-duration .price p.price,
+body main .container .contents .card .card-price-duration .duration p.price {
+  color: var(--cyan);
+  letter-spacing: 0.01rem;
+  font-size: calc(var(--small-size) * 0.92);
+}
+body main .container .contents .card .card-price-duration .price p.duration,
+body main .container .contents .card .card-price-duration .duration p.duration {
+  color: var(--soft-blue);
+  letter-spacing: 0.02rem;
+  font-weight: calc(var(--small-weight));
+}
+body main .container .contents .card .card-price-duration .price p.duration:hover,
+body main .container .contents .card .card-price-duration .duration p.duration:hover {
+  color: var(--cyan);
+}
+body main .container .contents .card .creator {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: calc(var(--ten-px) * 1.7);
+  border-top: 1px solid var(--dark-blue-01);
+}
+body main .container .contents .card .creator .profile {
+  --size: 36px;
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+body main .container .contents .card .creator .profile img {
+  box-shadow: -1px 1px 1px var(--white), -1px -1px 1px var(--white), 1px 1px 1px var(--white), 1px -1px 1px var(--white);
+  border-radius: 50%;
+}
+body main .container .contents .card .creator .text {
+  margin-left: calc(var(--ten-px) * 1.4);
+}
+body main .container .contents .card .creator .text p {
+  color: var(--soft-blue);
+}
+body main .container .contents .card .creator .text p span {
+  color: var(--white);
+}
+body .attribution {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 5vh;
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  color: var(--dark-blue-03);
+  background-color: var(--dark-blue-01);
+  transform: translateX(-50%);
+  font-size: var(--size);
+}
+body .attribution a {
+  color: white;
+}
+
+@media (max-width: var(--mobile-width)) {
+  body {
+    padding: calc(var(--ten-px) * 4) calc(var(--ten-px) * 1.5);
+  }
+  body main {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
